@@ -288,85 +288,12 @@ with open('2023\Day3\input.txt', 'r') as input:
                                 current_num = ''
                                 continue
                     continue
-                # if char_index == 0:
-                #     if current_line[char_index+1] == '*':
-                #         print(f'{current_num} is touching *!')
-                #         added_num = current_num
-                #         touching_numbers.append(current_num)
-                #         current_num = ''
-                #         continue
-                #     if len(prev_line) > 1 and len(next_line) > 1:
-                #         if (prev_line[char_index] == '*'
-                #             or prev_line[char_index + 1] == '*'
-                #             or next_line[char_index] == '*'
-                #             or next_line[char_index + 1] == '*'):
-                #             if added_num == '':
-                #                 print(f'{current_num} is touching *!')
-                #                 touching_numbers.append(current_num)
-                #                 added_num = current_num
-                #                 current_num = ''
-                #     elif len(prev_line) > 1:
-                #         if (prev_line[char_index] == '*'
-                #             or prev_line[char_index + 1] == '*'):
-                #             if added_num == '':
-                #                 print(f'{current_num} is touching *!')
-                #                 touching_numbers.append(current_num)
-                #                 added_num = current_num
-                #                 current_num = ''
-                #     elif len(next_line) > 1:
-                #         if (next_line[char_index] == '*'
-                #             or next_line[char_index + 1] == '*'):
-                #             if added_num == '':
-                #                 print(f'{current_num} is touching *')
-                #                 touching_numbers.append(current_num)
-                #                 added_num = current_num
-                #                 current_num = ''
-                #     continue
-                # if char_index == 139:
-                #     if not current_line[char_index-1].isdigit() and current_line[char_index-1] == '*':
-                #         print(f'{current_num} is touching *!')
-                #         added_num = current_num
-                #         touching_numbers.append(current_num)
-                #         current_num = ''
-                #         continue
-                #     if len(prev_line) > 1 and len(next_line) > 1:
-                #         if (prev_line[char_index] == '*'
-                #             or prev_line[char_index -1] == '*'
-                #             or next_line[char_index] == '*'
-                #             or next_line[char_index - 1] == '*'):
-                #             if added_num == '':
-                #                 print(f'{current_num} is touching *!')
-                #                 touching_numbers.append(current_num)
-                #                 added_num = current_num
-                #                 current_num = ''
-                #     elif len(prev_line) > 1:
-                #         if (prev_line[char_index] == '*'
-                #             or prev_line[char_index -1] == '*'):
-                #             if added_num == '':
-                #                 print(f'{current_num} is touching *.')
-                #                 touching_numbers.append(current_num)
-                #                 added_num = current_num
-                #                 current_num = ''
-                #     elif len(next_line) > 1:
-                #         if (next_line[char_index] == '*'
-                #             or next_line[char_index -1] == '*'):
-                #             if added_num == '':
-                #                 print(f'{current_num} is touching *')
-                #                 touching_numbers.append(current_num)
-                #                 added_num = current_num
-                #                 current_num = ''
-                #     continue
     ratios = []
     print(dict_of_gears)
     for each_dict in dict_of_gears:
         for each_entry in dict_of_gears[each_dict]:
             if len(dict_of_gears[each_dict][each_entry]) == 2:
                 ratios.append(int(dict_of_gears[each_dict][each_entry][0]) * int(dict_of_gears[each_dict][each_entry][1]))
-            else:
-                print(each_dict, dict_of_gears[each_dict])
-
-
-
     sum = 0
     for each_ratio in ratios:
         sum += each_ratio
