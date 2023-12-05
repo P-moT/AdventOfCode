@@ -1,4 +1,4 @@
-with open('Day1\input.txt', 'r') as input:
+with open('2023\Day1\input.txt', 'r') as input:
     final_values = []
     for line in input:
         int_in_str = []

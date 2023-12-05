@@ -1,6 +1,4 @@
-import re
-bad_games = []
-with open('Day2\input.txt', 'r') as input:
+with open('2023\Day2\input.txt', 'r') as input:
     list = list(enumerate(input, 1))
     total_len = len(list)
     print(total_len)

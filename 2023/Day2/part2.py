@@ -2,7 +2,7 @@ high_reds = []
 high_blues = []
 high_greens =[]
 high_products = []
-with open('Day2\input.txt', 'r') as input:
+with open('2023\Day2\input.txt', 'r') as input:
     list = list(enumerate(input, 1))
     total_len = len(list)
     possible_games = []
